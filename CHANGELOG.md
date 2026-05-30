@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Updated Gemini CLI install docs to use the full GitHub URL required by `gemini extensions install`.
+
 ## 0.1.1
 
 - Repositioned repository as the universal Martini MCP distribution repo.
@@ -11,4 +15,3 @@
 ## 0.1.0
 
 - Initial Gemini CLI extension for Martini MCP.
-

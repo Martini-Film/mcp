@@ -1,6 +1,6 @@
 {
   "name": "mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Connect Gemini CLI to Martini's MCP server for film projects, scenes, assets, and AI generation workflows.",
   "mcpServers": {
     "martini": {

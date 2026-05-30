@@ -17,7 +17,7 @@ Authentication is handled by Martini's OAuth flow. This repository does not incl
 ### Gemini CLI
 
 ```bash
-gemini extensions install martini-film/mcp --auto-update
+gemini extensions install https://github.com/Martini-Film/mcp --auto-update
 ```
 
 Restart Gemini CLI, then verify the connection:
@@ -123,4 +123,3 @@ In my current Martini project, create a scene breakdown for a moody tabletop cof
 ## Support
 
 Email support@martini.film.
-

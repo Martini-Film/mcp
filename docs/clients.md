@@ -11,7 +11,7 @@ https://www.martini.film/mcp
 Install the extension from GitHub:
 
 ```bash
-gemini extensions install martini-film/mcp --auto-update
+gemini extensions install https://github.com/Martini-Film/mcp --auto-update
 ```
 
 Restart Gemini CLI and run:
@@ -79,4 +79,3 @@ If the client expects Gemini-style settings, use:
 - Use the client's MCP status command, usually `/mcp`, to confirm the server is connected.
 - If sign-in does not open, check whether the client supports remote HTTP MCP servers with OAuth.
 - If your organization blocks custom connectors, ask an admin to allow `https://www.martini.film/mcp`.
-

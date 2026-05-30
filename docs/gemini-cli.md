@@ -5,7 +5,7 @@ This repository is a Gemini CLI extension because it includes a root `gemini-ext
 ## Install
 
 ```bash
-gemini extensions install martini-film/mcp --auto-update
+gemini extensions install https://github.com/Martini-Film/mcp --auto-update
 ```
 
 Restart Gemini CLI after installation.
@@ -63,4 +63,3 @@ Validate before release:
 ```bash
 npx -y @google/gemini-cli extensions validate .
 ```
-

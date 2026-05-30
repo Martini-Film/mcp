@@ -7,7 +7,7 @@
 - [ ] `gemini-extension.json` is at the repository root.
 - [ ] Manifest `name` matches the repository/extension directory name: `mcp`.
 - [ ] Manifest version matches the Git tag for release builds.
-- [ ] Extension installs with `gemini extensions install martini-film/mcp`.
+- [ ] Extension installs with `gemini extensions install https://github.com/Martini-Film/mcp`.
 - [ ] Martini MCP server appears in Gemini CLI `/mcp`.
 - [ ] First-time OAuth sign-in completes successfully.
 
@@ -40,4 +40,3 @@ gh release create v0.1.1 --title "v0.1.1" --notes-file CHANGELOG.md
 ```
 
 The Gemini CLI gallery crawler checks public repositories with the `gemini-cli-extension` topic. Listing is automatic if the repository passes validation. No public SLA is documented beyond the crawler behavior.
-
