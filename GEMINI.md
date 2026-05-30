@@ -11,7 +11,10 @@ Operational guidance:
 - Before destructive, expensive, or broad actions, briefly restate the intended action and ask for explicit confirmation.
 - Do not invent Martini project IDs, asset IDs, or generation IDs. Discover them through the MCP tools or ask the user.
 - Keep prompts for image and video generation concrete: include subject, action, camera, setting, style, duration, and constraints when available.
+- Before generation, inspect available models when the user has not specified one.
+- For multi-shot or expensive work, summarize the model, count, and likely impact before starting generation.
+- Prefer overview and inspection tools before making project changes.
+- Use upload or storage reachability checks before upload/download workflows when available.
 - When a tool returns a Martini URL or resource, include it in the response so the user can open the result.
 - Do not request, print, or store authentication tokens. Martini sign-in should happen through the MCP client's OAuth browser flow.
 - If the MCP server is not connected, tell the user to restart Gemini CLI and run `/mcp` to verify the `martini` server.
-

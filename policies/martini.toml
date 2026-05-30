@@ -1,0 +1,36 @@
+[[rule]]
+mcpName = "martini"
+toolName = "generate"
+decision = "ask_user"
+priority = 100
+
+[[rule]]
+mcpName = "martini"
+toolName = "create_node_and_generate"
+decision = "ask_user"
+priority = 100
+
+[[rule]]
+mcpName = "martini"
+toolName = "create_nodes_and_generate"
+decision = "ask_user"
+priority = 100
+
+[[rule]]
+mcpName = "martini"
+toolName = "complete_upload"
+decision = "ask_user"
+priority = 90
+
+[[rule]]
+mcpName = "martini"
+toolName = "delete_asset"
+decision = "ask_user"
+priority = 100
+
+[[rule]]
+mcpName = "martini"
+toolName = "delete_node"
+decision = "ask_user"
+priority = 100
+

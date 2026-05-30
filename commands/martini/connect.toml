@@ -1,0 +1,10 @@
+prompt = """
+Help the user connect Gemini CLI to Martini MCP.
+
+Steps:
+1. Ask the user to run `/mcp` and confirm whether the `martini` server is listed.
+2. If authentication is needed, instruct them to run `/mcp auth martini` and complete Martini sign-in in the browser.
+3. After connection, use the Martini MCP server to list available projects if the user wants a live check.
+4. Do not ask the user to paste access tokens into chat.
+"""
+

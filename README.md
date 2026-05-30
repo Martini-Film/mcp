@@ -1,18 +1,26 @@
-# Martini MCP for Gemini CLI
+# Martini MCP
 
-Use Martini from Gemini CLI through Martini's hosted Model Context Protocol server.
+Official client integration and distribution repo for Martini's hosted Model Context Protocol server.
 
-Martini is an AI video production tool for filmmakers. The MCP server lets compatible AI assistants browse and create Martini projects, scenes, subjects, assets, bins, and generation jobs.
+Martini is an AI video production tool for filmmakers. The MCP server lets compatible AI assistants browse and create Martini projects, scenes, subjects, assets, bins, uploads, and generation jobs.
+
+## Server
+
+```text
+https://www.martini.film/mcp
+```
+
+Authentication is handled by Martini's OAuth flow. This repository does not include local binaries, API keys, or secrets.
 
 ## Install
 
+### Gemini CLI
+
 ```bash
-gemini extensions install martini-film/martini-mcp --auto-update
+gemini extensions install martini-film/mcp --auto-update
 ```
 
-Restart Gemini CLI after installation. On first use, Gemini CLI will connect to Martini's hosted MCP server and open the normal Martini sign-in flow.
-
-Verify the connection inside Gemini CLI:
+Restart Gemini CLI, then verify the connection:
 
 ```text
 /mcp
@@ -20,7 +28,74 @@ Verify the connection inside Gemini CLI:
 
 You should see a `martini` MCP server.
 
-## Example prompts
+### Claude
+
+In Claude, add Martini as a custom connector with this server URL:
+
+```text
+https://www.martini.film/mcp
+```
+
+### Claude Code
+
+```bash
+claude mcp add --transport http martini https://www.martini.film/mcp
+```
+
+### Generic MCP Clients
+
+Use a remote HTTP MCP server named `martini`:
+
+```json
+{
+  "mcpServers": {
+    "martini": {
+      "type": "http",
+      "url": "https://www.martini.film/mcp"
+    }
+  }
+}
+```
+
+Some clients use `httpUrl` instead of `url`:
+
+```json
+{
+  "mcpServers": {
+    "martini": {
+      "httpUrl": "https://www.martini.film/mcp"
+    }
+  }
+}
+```
+
+## Gemini CLI Commands
+
+This extension includes prompt-wrapper commands:
+
+- `/martini:connect`
+- `/martini:overview`
+- `/martini:generate-plan`
+- `/martini:upload-check`
+- `/martini:project`
+
+## Uninstall
+
+```bash
+gemini extensions uninstall mcp
+```
+
+## Docs
+
+- [Client setup](docs/clients.md)
+- [Gemini CLI extension](docs/gemini-cli.md)
+- [OAuth and authentication](docs/oauth.md)
+- [Tool safety](docs/tool-safety.md)
+- [Where this repo can be used](docs/listing-uses.md)
+- [Release checklist](docs/release-checklist.md)
+- [Risk mitigation](docs/risk-mitigation.md)
+
+## Example Prompts
 
 ```text
 List my Martini projects.
@@ -38,37 +113,14 @@ Create a new Martini project for a 30-second product film about a ceramic coffee
 In my current Martini project, create a scene breakdown for a moody tabletop coffee commercial.
 ```
 
-## Manual MCP setup
+## Security Notes
 
-If you do not want to install the extension, add the MCP server directly:
+- Review tool approval prompts before allowing write, upload, or generation actions.
+- Do not paste Martini access tokens into chat.
+- Treat signed asset URLs as sensitive while they are active.
+- Use disposable projects when testing new automated workflows.
 
-```bash
-gemini mcp add -s user --transport http martini https://www.martini.film/mcp
-```
+## Support
 
-## What this extension includes
-
-- `gemini-extension.json` with Martini's hosted MCP server configuration.
-- `GEMINI.md` with usage guidance for Martini workflows.
-- A `/martini:project` command for common project-oriented requests.
-
-The extension does not include local binaries and does not require API keys. Authentication is handled by Martini's OAuth flow.
-
-## Release and gallery listing
-
-Gemini CLI can install extensions from public GitHub repositories. The Gemini CLI extension gallery crawls public repositories with the `gemini-cli-extension` topic and a root-level `gemini-extension.json`.
-
-For this repository:
-
-- Keep `gemini-extension.json` at the repository root.
-- Keep the repository public.
-- Add the GitHub topic `gemini-cli-extension`.
-- Tag releases, for example `v0.1.0`, after validating the manifest.
-
-## Links
-
-- Martini: https://www.martini.film
-- MCP docs: https://www.martini.film/docs/mcp
-- Terms: https://www.martini.film/terms
-- Support: support@martini.film
+Email support@martini.film.
 

@@ -1,0 +1,9 @@
+prompt = """
+Help the user prepare a Martini upload or download workflow.
+
+User request:
+{{args}}
+
+Use Martini MCP to check storage or upload reachability when the tool is available. Explain any connectivity or permission issue in practical terms. Do not request secrets or raw tokens.
+"""
+

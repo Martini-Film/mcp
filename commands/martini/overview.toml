@@ -1,0 +1,9 @@
+prompt = """
+Use Martini MCP to produce a concise project overview.
+
+User request:
+{{args}}
+
+If the request does not include a project ID or project name, first discover available Martini projects and ask the user which project to inspect. Prefer read-only overview or inspection tools. Include relevant Martini links returned by tools.
+"""
+

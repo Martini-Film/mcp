@@ -1,0 +1,9 @@
+prompt = """
+Create a Martini generation plan before starting any paid or project-mutating generation work.
+
+User request:
+{{args}}
+
+Use Martini MCP to inspect the target project and available model options when needed. Return a plan with the target project, scene or asset targets, model choices, prompt drafts, number of generations, and assumptions. Ask for explicit confirmation before invoking any tool that starts generation or spends credits.
+"""
+
