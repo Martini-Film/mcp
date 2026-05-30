@@ -1,0 +1,8 @@
+prompt = """
+Use the Martini MCP server to help with this Martini project request:
+
+{{args}}
+
+If the request does not include a project ID or project name, first discover the user's available Martini projects. Before destructive, expensive, or broad changes, ask the user for confirmation.
+"""
+

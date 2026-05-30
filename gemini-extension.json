@@ -1,0 +1,12 @@
+{
+  "name": "martini-mcp",
+  "version": "0.1.0",
+  "description": "Connect Gemini CLI to Martini's MCP server for film projects, scenes, assets, and AI generation workflows.",
+  "mcpServers": {
+    "martini": {
+      "httpUrl": "https://www.martini.film/mcp",
+      "timeout": 30000
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
